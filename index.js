@@ -6,3 +6,15 @@
 // use response to populate html page
 // make html page into pdf using node package provided
 
+
+const questions = [
+  
+];
+
+function writeToFile(fileName, data) {
+ 
+}
+
+function init() {
+
+init();
