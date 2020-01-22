@@ -1,6 +1,9 @@
 // dependencies
+const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
+const genHTML = require("./generateHTML");
+const pdfConverter = require("electron-html-to");
 
 // get user input: github username, color choice from list
 // use axios package to access GitHub api for username

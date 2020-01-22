@@ -172,3 +172,8 @@ function generateHTML(data) {
          }
       </style>`
         }
+
+// export
+module.exports = {
+  generateHTML: generateHTML
+}
