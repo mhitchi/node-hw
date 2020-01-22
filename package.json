@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/mhitchi/node-hw#readme",
   "dependencies": {
+    "axios": "^0.19.2",
+    "electron": "^7.1.10",
+    "electron-html-to": "^2.6.0",
     "inquirer": "^7.0.3",
     "package.json": "^2.0.1"
   }
