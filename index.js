@@ -42,6 +42,7 @@ inquirer.prompt(questions).then((response) => {
 
 function getGithubInfo(user) {
   axios.get("https://api.github.com/users/" + user).then((response) => {
+    //console.log(response);
     //image
     console.log(response.data.avatar_url);
     //username
@@ -60,7 +61,7 @@ function getGithubInfo(user) {
     console.log(response.data.followers);
     //number of Github stars
     //TODO returning undefined
-    console.log(response.data.starred);
+    console.log(response.data.starred_url.length);
     //number following
     console.log(response.data.following);
   }).catch(function(err) {
@@ -68,7 +69,7 @@ function getGithubInfo(user) {
   });
 };
 
-// function writeToFile(fileName, data) {
+// function writeToFile(profile.html, data) {
 
  
 // }
