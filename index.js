@@ -1,15 +1,12 @@
+// TODO use response to populate html page
+// TODO make html page into pdf using node package provided
+
 // dependencies
 const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
 const genHTML = require("./generateHTML");
 const pdfConverter = require("electron-html-to");
-
-// get user input: github username, color choice from list
-// use axios package to access GitHub api for username
-// use response to populate html page
-// make html page into pdf using node package provided
-
 
 const questions = [
   {
@@ -33,10 +30,10 @@ const questions = [
 ];
 
 // use inquirer to prompt questions
-inquirer.prompt(questions).then(function(response) {
+inquirer.prompt(questions).then((response) => {
   console.log(response);
 
-  var data = {
+  const data = {
     username: response.username,
     color: response.color
   }
@@ -44,7 +41,7 @@ inquirer.prompt(questions).then(function(response) {
 });
 
 function getGithubInfo(user) {
-  axios.get("https://api.github.com/users/" + user).then(function(response) {
+  axios.get("https://api.github.com/users/" + user).then((response) => {
     //image
     console.log(response.data.avatar_url);
     //username
